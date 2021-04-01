@@ -9,13 +9,13 @@ parse-clipboard: has [
     split data either find data cr [cr][lf]
 ]
 
-replace-clipboard: function [
-    "Replaces given string in clipboard"
-    find-value [char! string!]
-    replace-value [char! string!]
-] [
-    write-clipboard replace/all read-clipboard find-value replace-value
-]
+; replace-clipboard: function [
+;     "Replaces given string in clipboard"
+;     find-value [char! string!]
+;     replace-value [char! string!]
+; ] [
+;     write-clipboard replace/all read-clipboard find-value replace-value
+; ]
 
 ; "Write unixtime to clipboard"
 get-unixtime: does [
@@ -52,6 +52,7 @@ generate-string: function [
         "98765432"
         "ASDFGHJKLZXCVBNMQWERTYUP"
         "asdfghijkzxcvbnmqwertyup"
+        "!.*=?+%&-()"
     ] string-length
 
     write-clipboard probe result

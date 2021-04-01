@@ -57,7 +57,7 @@ sql-insert: has [
         ]
     ]
 
-    print [result/1 newline "..."]
+    print [result newline "..."]
 
     write-clipboard merge/with result newline
 

@@ -38,30 +38,30 @@ trim-each: function [
     forall block [trim block/1]
 ]
 
-append-each: function [
-    "Appends given string to all values in block"
-    block [block!]
-    append-value [char! string! integer!]
-] [
-    forall block [block/1: rejoin[block/1 append-value]]
-]
+; append-each: function [
+;     "Appends given string to all values in block"
+;     block [block!]
+;     append-value [char! string! integer!]
+; ] [
+;     forall block [block/1: rejoin[block/1 append-value]]
+; ]
 
-prepend-each: function [
-    "Prepends given string to all values in block"
-    block [block!]
-    prepend-value [char! string! integer!]
-] [
-    forall block [block/1: rejoin[prepend-value block/1]]
-]
+; prepend-each: function [
+;     "Prepends given string to all values in block"
+;     block [block!]
+;     prepend-value [char! string! integer!]
+; ] [
+;     forall block [block/1: rejoin[prepend-value block/1]]
+; ]
 
-replace-each: function [
-    "Replaces given string from all values in block"
-    block [block!]
-    find-value [char! string!]
-    replace-value [char! string!]
-] [
-    forall block [block/1: replace/all block/1 find-value replace-value]
-]
+; replace-each: function [
+;     "Replaces given string from all values in block"
+;     block [block!]
+;     find-value [char! string!]
+;     replace-value [char! string!]
+; ] [
+;     forall block [block/1: replace/all block/1 find-value replace-value]
+; ]
 
 collect-each: function [
     "Reverse version of remove-each"
